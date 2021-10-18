@@ -135,11 +135,13 @@ input {
   display: inline;
   font-style: italic;
   position: relative;
-  left: 50px;
+  left: 30px;
+  top: 20px;
 }
 
 .hostedLink {
   position: relative;
-  left: 300px;
+  left: 200px;
   display: inline;
+  top: 20px;
 }
