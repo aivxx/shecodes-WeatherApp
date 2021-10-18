@@ -1,0 +1,132 @@
+html {
+  background-color: #fff;
+  margin: 10px 100px;
+  padding: 10px 100px 100px;
+  max-width: 1024px;
+}
+
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 auto;
+  border-radius: 50px;
+  border: 3px solid #fff;
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+  background-repeat: no-repeat;
+}
+.container-search {
+  margin: 20px;
+  text-align: center;
+  max-width: 1024px;
+  display: inline-flex;
+  position: relative;
+  left: 190px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.location {
+  display: inline;
+  position: relative;
+  left: 170px;
+  background-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input {
+  color: #000;
+  background-color: transparent;
+}
+
+.city {
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 40px;
+  line-height: 30px;
+}
+
+.currentDay,
+.currentTime {
+  font-style: italic;
+  text-align: left;
+  margin-left: 50px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.currentEmoji {
+  font-size: 80px;
+  margin-top: 50px;
+  margin-left: 90px;
+  float: left;
+  line-height: 60px;
+  max-width: 1024px;
+  display: inline;
+}
+
+.dayTemp {
+  font-size: 60px;
+  position: relative;
+  left: 10px;
+  top: 20px;
+  font-size: 80px;
+  margin: 0 auto;
+}
+
+.celsius-fahrenheit {
+  font-size: 16px;
+  position: relative;
+  left: 300px;
+  bottom: 70px;
+}
+
+.humidity,
+.precipitation,
+.feelsLike,
+.feelsType,
+.humidPercent {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  left: 400px;
+  bottom: 90px;
+  font-weight: bold;
+}
+
+.week-days {
+  position: relative;
+  bottom: 40px;
+  padding: 10px;
+  display: inline-flex;
+  text-align: center;
+  margin-left: 70px;
+}
+
+.days {
+  padding: 20px 10px;
+  border: 1px solid #757a79;
+  border-radius: 10px;
+  margin: 0 3px;
+  text-align: center;
+  max-width: 1024px;
+}
+
+.weekday {
+  font-size: 15px;
+  max-width: 1024px;
+}
+.week-day-image {
+  font-size: 15px;
+  max-width: 1024px;
+}
+
+.maxtemp,
+.mintemp {
+  font-size: 12px;
+  line-height: 15px;
+  display: inline;
+}
+.maxtemp {
+  font-weight: bold;
+}
