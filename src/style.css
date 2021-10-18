@@ -130,3 +130,16 @@ input {
 .maxtemp {
   font-weight: bold;
 }
+
+.codedBy {
+  display: inline;
+  font-style: italic;
+  position: relative;
+  left: 50px;
+}
+
+.hostedLink {
+  position: relative;
+  left: 300px;
+  display: inline;
+}
