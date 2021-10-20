@@ -2,7 +2,6 @@ html {
   background-color: #fff;
   margin: 10px 100px;
   padding: 10px 100px 100px;
-  max-width: 1024px;
 }
 
 body {
@@ -49,6 +48,7 @@ input {
   margin-left: 40px;
   margin-top: 40px;
   line-height: 30px;
+  text-transform: capitalize;
 }
 
 .currentDay,
@@ -79,7 +79,7 @@ input {
 .celsius-fahrenheit {
   font-size: 16px;
   position: relative;
-  left: 300px;
+  left: 310px;
   bottom: 70px;
 }
 

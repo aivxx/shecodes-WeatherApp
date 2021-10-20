@@ -34,9 +34,10 @@ function showTemperature(response) {
   let feelsLIke = document.querySelector(".feelsType");
   let iconElement = document.querySelector("#icon");
   let icon = response.data.weather[0].icon;
-  //let weathericon = document.querySelector(".currentEmoji");
 
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  fahrenheitTemperature = response.data.main.temp;
+
+  currentTemp.innerHTML = Math.round(fahrenheitTemperature);
   humidity.innerHTML = `${response.data.main.humidity}%`;
   skyType.innerHTML = response.data.weather[0].description;
   feelsLIke.innerHTML = `${Math.round(response.data.main.feels_like)}°`;
@@ -45,7 +46,6 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  //weathericon.innerHTML = response.data.weather.icon;
 }
 
 //Search City and input temp
@@ -87,3 +87,24 @@ function getCurrentLoction(event) {
 
 let currentLocationButton = document.querySelector(".location");
 currentLocationButton.addEventListener("click", getCurrentLoction);
+
+//F to C
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector(".dayTemp");
+  tempElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
+  let tempElement = document.querySelector(".dayTemp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let fahrenheitTemperature = null;
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsiusTemp);
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemp);
