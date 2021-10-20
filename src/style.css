@@ -31,11 +31,15 @@ body {
   left: 170px;
   background-color: transparent;
   font-family: "Courier New", Courier, monospace;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 input {
   color: #000;
   background-color: transparent;
+  border-radius: 30px;
+  border: 1px solid black;
 }
 
 .city {
