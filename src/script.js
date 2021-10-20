@@ -44,6 +44,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   //weathericon.innerHTML = response.data.weather.icon;
 }
 
