@@ -32,12 +32,18 @@ function showTemperature(response) {
   let humidity = document.querySelector(".humidPercent");
   let skyType = document.querySelector(".sky");
   let feelsLIke = document.querySelector(".feelsType");
+  let iconElement = document.querySelector("#icon");
+  let icon = response.data.weather[0].icon;
   //let weathericon = document.querySelector(".currentEmoji");
 
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = `${response.data.main.humidity}%`;
   skyType.innerHTML = response.data.weather[0].description;
   feelsLIke.innerHTML = `${Math.round(response.data.main.feels_like)}°`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
   //weathericon.innerHTML = response.data.weather.icon;
 }
 

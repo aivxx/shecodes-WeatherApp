@@ -56,14 +56,11 @@ input {
   line-height: 50px;
 }
 
-.currentEmoji {
-  font-size: 80px;
+.currentEmoji img {
+  width: auto;
   position: relative;
-  left: 100px;
-  top: 30px;
-  line-height: 60px;
-  max-width: 1024px;
-  display: inline;
+  left: 90px;
+  top: 20px;
 }
 
 .dayTemp {
@@ -79,7 +76,7 @@ input {
   font-size: 16px;
   position: relative;
   left: 300px;
-  bottom: 50px;
+  bottom: 70px;
 }
 
 .humidity,
