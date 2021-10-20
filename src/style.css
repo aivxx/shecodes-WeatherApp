@@ -95,6 +95,16 @@ input {
   font-weight: bold;
 }
 
+.sky {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  font-weight: bold;
+  left: 400px;
+  bottom: 90px;
+  text-transform: capitalize;
+}
+
 .week-days {
   position: relative;
   bottom: 20px;

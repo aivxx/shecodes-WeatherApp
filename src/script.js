@@ -30,12 +30,13 @@ currentDay.innerHTML = `${day}`;
 function showTemperature(response) {
   let currentTemp = document.querySelector(".dayTemp");
   let humidity = document.querySelector(".humidPercent");
-
+  let skyType = document.querySelector(".sky");
   let feelsLIke = document.querySelector(".feelsType");
   //let weathericon = document.querySelector(".currentEmoji");
 
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = `${response.data.main.humidity}%`;
+  skyType.innerHTML = response.data.weather[0].description;
   feelsLIke.innerHTML = `${Math.round(response.data.main.feels_like)}°`;
   //weathericon.innerHTML = response.data.weather.icon;
 }
