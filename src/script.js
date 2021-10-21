@@ -92,13 +92,17 @@ currentLocationButton.addEventListener("click", getCurrentLoction);
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector(".dayTemp");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   tempElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelsiusTemp(event) {
   event.preventDefault();
-  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
   let tempElement = document.querySelector(".dayTemp");
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
+  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
   tempElement.innerHTML = Math.round(celsiusTemp);
 }
 

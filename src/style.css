@@ -81,6 +81,17 @@ input {
   position: relative;
   left: 310px;
   bottom: 70px;
+  text-decoration: none;
+}
+
+.celsius-fahrenheit .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.celsius-fahrenheit .active:hover {
+  text-decoration: none;
 }
 
 .humidity,
@@ -126,7 +137,6 @@ input {
 
 .weekday {
   font-size: 15px;
-  max-width: 1024px;
 }
 .week-day-image {
   font-size: 15px;
