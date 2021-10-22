@@ -131,9 +131,10 @@ function showForecast() {
           alt = ""
           width = "42"
           />
-          <br />
+          <div class = "forecast-temps">
           <span class="maxtemp">13° /</span>
           <span class="mintemp">8°</span>
+          </div>
         </div>
        `;
   });

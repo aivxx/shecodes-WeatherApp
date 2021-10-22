@@ -121,18 +121,16 @@ input {
   position: relative;
   bottom: 20px;
   padding: 10px auto;
-  display: inline-flex;
+  right: 38px;
   text-align: center;
   margin-left: 80px;
 }
 
 .days {
   padding: 20px 10px;
-  border: 1px solid #757a79;
-  border-radius: 10px;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
   margin: 0 3px;
-  text-align: center;
-  max-width: 1024px;
 }
 
 .weekday {
@@ -143,8 +141,7 @@ input {
   max-width: 1024px;
 }
 
-.maxtemp,
-.mintemp {
+.forecast-temps {
   font-size: 12px;
   line-height: 15px;
   display: inline;
