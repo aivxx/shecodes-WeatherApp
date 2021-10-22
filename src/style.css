@@ -24,6 +24,14 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+input .placeholder {
+  text-align: center;
+}
+
+.searchInput {
+  text-align: center;
+}
+
 .location {
   display: inline;
   position: relative;
