@@ -79,7 +79,7 @@ input {
 .celsius-fahrenheit {
   font-size: 16px;
   position: relative;
-  left: 310px;
+  left: 290px;
   bottom: 70px;
   text-decoration: none;
 }
@@ -88,6 +88,7 @@ input {
   color: black;
   cursor: default;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .celsius-fahrenheit .active:hover {
@@ -119,17 +120,16 @@ input {
 
 #forecast {
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
   padding: 10px auto;
   right: 38px;
+  background-color: RGBA(189, 48, 80, 0.14);
   text-align: center;
   margin-left: 80px;
 }
 
 .days {
   padding: 20px 10px;
-  border-top: 1px dotted black;
-  border-bottom: 1px dotted black;
   margin: 0 3px;
 }
 

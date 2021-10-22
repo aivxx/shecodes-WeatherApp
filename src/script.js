@@ -47,6 +47,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 //Search City and input temp
@@ -144,3 +146,5 @@ function showForecast() {
 }
 
 showForecast();
+
+//function getForecast (coordinates) {
