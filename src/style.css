@@ -124,6 +124,7 @@ input {
   padding: 10px auto;
   right: 38px;
   background-color: RGBA(189, 48, 80, 0.14);
+  border-radius: 10px;
   text-align: center;
   margin-left: 80px;
 }
