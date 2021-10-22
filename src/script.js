@@ -9,7 +9,6 @@ let days = [
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 let day = days[now.getDay()];
 
@@ -36,6 +35,8 @@ function showTemperature(response) {
   let icon = response.data.weather[0].icon;
 
   fahrenheitTemperature = response.data.main.temp;
+
+  showForecast();
 
   currentTemp.innerHTML = Math.round(fahrenheitTemperature);
   humidity.innerHTML = `${response.data.main.humidity}%`;
@@ -112,3 +113,33 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsiusTemp);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+//Forecast
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row week-days" >`;
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+        <div class="col days">
+          <div class="week-day">${day}</div>
+          <img 
+          src = "http://openweathermap.org/img/wn/10d@2x.png"
+          alt = ""
+          width = "42"
+          />
+          <br />
+          <span class="maxtemp">13° /</span>
+          <span class="mintemp">8°</span>
+        </div>
+       `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+showForecast();
