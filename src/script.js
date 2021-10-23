@@ -102,6 +102,7 @@ function showTemperature(response) {
   let humidity = document.querySelector(".humidPercent");
   let skyType = document.querySelector(".sky");
   let feelsLIke = document.querySelector(".feelsType");
+  let windSpeed = document.querySelector(".windSpeed");
   let iconElement = document.querySelector("#icon");
   let icon = response.data.weather[0].icon;
 
@@ -111,6 +112,7 @@ function showTemperature(response) {
   humidity.innerHTML = `${response.data.main.humidity}%`;
   skyType.innerHTML = response.data.weather[0].description;
   feelsLIke.innerHTML = `${Math.round(response.data.main.feels_like)}°`;
+  windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${icon}@2x.png`
@@ -122,6 +124,13 @@ function showTemperature(response) {
 
 //Search City and input temp
 
+function search(city) {
+  let apiKey = "04bde8cc7f569f7c5603cdbc6deb89a3";
+  let units = "imperial";
+  let apicityURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apicityURL).then(showTemperature);
+}
+
 function searchCity(event) {
   event.preventDefault();
 
@@ -132,6 +141,7 @@ function searchCity(event) {
   cityNew.innerHTML = `${SearchInput.value}`;
   let apicityURL = `https://api.openweathermap.org/data/2.5/weather?q=${SearchInput.value}&appid=${apiKey}&units=${units}`;
   axios.get(apicityURL).then(showTemperature);
+  axios.get(apicityURL).then(showForecast);
 }
 
 let submitCity = document.querySelector("#search-city");
@@ -185,3 +195,5 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsiusTemp);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+search("Miami");

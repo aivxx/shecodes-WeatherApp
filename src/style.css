@@ -107,7 +107,9 @@ input {
 .precipitation,
 .feelsLike,
 .feelsType,
-.humidPercent {
+.humidPercent,
+.wind,
+.windSpeed {
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   position: relative;
