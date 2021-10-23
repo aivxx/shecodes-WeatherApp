@@ -63,7 +63,7 @@ function showForecast(response) {
 
   let forecastHTML = `<div class="row week-days" >`;
   forecastDaily.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         ` 
@@ -90,7 +90,6 @@ function showForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "04bde8cc7f569f7c5603cdbc6deb89a3";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiURL).then(showForecast);
@@ -107,8 +106,6 @@ function showTemperature(response) {
   let icon = response.data.weather[0].icon;
 
   fahrenheitTemperature = response.data.main.temp;
-
-  showForecast();
 
   currentTemp.innerHTML = Math.round(fahrenheitTemperature);
   humidity.innerHTML = `${response.data.main.humidity}%`;
