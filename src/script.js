@@ -37,7 +37,6 @@ function showTemperature(response) {
   fahrenheitTemperature = response.data.main.temp;
 
   showForecast();
-
   currentTemp.innerHTML = Math.round(fahrenheitTemperature);
   humidity.innerHTML = `${response.data.main.humidity}%`;
   skyType.innerHTML = response.data.weather[0].description;
