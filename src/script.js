@@ -63,7 +63,7 @@ function showForecast(response) {
 
   let forecastHTML = `<div class="row week-days" >`;
   forecastDaily.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         ` 
@@ -154,6 +154,7 @@ function currentLocation(position) {
   let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiWeatherURL).then(showLocation);
   axios.get(apiWeatherURL).then(showTemperature);
+  axios.get(apiWeatherURL).then(showForecast);
 }
 
 function getCurrentLoction(event) {
