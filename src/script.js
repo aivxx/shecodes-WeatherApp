@@ -133,7 +133,8 @@ function search(city) {
 
 function searchCity(event) {
   event.preventDefault();
-
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let apiKey = "04bde8cc7f569f7c5603cdbc6deb89a3";
   let units = "imperial";
   let SearchInput = document.querySelector("#searchCity");
