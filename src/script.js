@@ -158,6 +158,8 @@ function currentLocation(position) {
   let apiKey = "04bde8cc7f569f7c5603cdbc6deb89a3";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiWeatherURL).then(showLocation);
   axios.get(apiWeatherURL).then(showTemperature);
